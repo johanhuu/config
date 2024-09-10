@@ -1,0 +1,70 @@
+"editor.tokenColorCustomizations": {
+    "textMateRules": [
+        {
+            // KEYWORDS
+            "scope": [
+                "keyword.control.flow.python",
+                "keyword.control.import.python",
+                "punctuation.definition.decorator.python",
+                "storage.type.class.python",
+                "keyword.operator.logical",
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#FF6188"
+            }
+        },
+        { // dict(), set() etc. to functions
+            "scope": [
+                "source.python meta.function-call.python support.type.python",
+                // Need to re-add this because return type hint from custom class shares scopes with functions xD
+                "entity.name.function",
+                // So do dunders, restore __init__ etc to nonbold
+                "support.function.magic.python"
+                // Constructor call and own function have the same scopes :(
+                // "meta.function-call.generic.python",
+            ],
+            "settings": {
+                "fontStyle": "",
+                "foreground": "#A9DC76"
+            }
+        },
+        { // CLASS
+            "scope": [
+                "entity.name.type.class.python",
+                "meta.function.python meta.item-access.python meta.indexed-name.python",
+                "meta.function.python",
+                "entity.other.inherited-class",
+                // Constructor call and own function have the same scopes :(
+                // "meta.function-call.generic.python",
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#1290c3" //"#6c99bb"
+            }
+        },
+        { // PROPERTIES
+            "scope": [
+                //"meta.attribute.python",
+                //"meta.function-call.generic.python",
+                //"meta.function-call.python",
+                "meta.attribute.python",
+                //"meta.member.access.python"
+            ],
+            "settings": {
+                "foreground": "#eed40c"
+                //"foreground": "#dec60d"
+            }
+        },
+        { // SELF
+            "scope": [
+                "variable.language.special.self.python",
+                "variable.parameter.function.language.special.self.python"
+            ],
+            "settings": {
+                "foreground": "#FC9867",
+                "fontStyle": "italic"
+            }
+        },
+    ]
+}
