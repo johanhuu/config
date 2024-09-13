@@ -133,14 +133,6 @@
         "command": "-workbench.action.gotoLine"
     },
     {
-        "key": "alt+left",
-        "command": "workbench.action.navigateBackInEditLocations"
-    },
-    {
-        "key": "alt+right",
-        "command": "workbench.action.navigateForwardInEditLocations"
-    },
-    {
         "key": "shift+alt+up",
         "command": "-editor.action.copyLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
@@ -193,5 +185,77 @@
     {
         "key": "ctrl+t",
         "command": "references-view.showTypeHierarchy"
+    },
+    {
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "ctrl+alt+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "alt+right",
+        "command": "-gitlens.key.alt+right",
+        "when": "gitlens:key:alt+right"
+    },
+    {
+        "key": "alt+right",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+left",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+left",
+        "command": "-gitlens.key.alt+left",
+        "when": "gitlens:key:alt+left"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+        "when": "accessibilityHelpIsShown"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "editor.action.addSelectionToPreviousFindMatch"
     }
 ]
