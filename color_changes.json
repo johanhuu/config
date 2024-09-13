@@ -20,23 +20,40 @@
                 // Need to re-add this because return type hint from custom class shares scopes with functions xD
                 "entity.name.function",
                 // So do dunders, restore __init__ etc to nonbold
-                "support.function.magic.python"
-                // Constructor call and own function have the same scopes :(
-                // "meta.function-call.generic.python",
+                "support.function.magic.python",
+                "source.python meta.member.access.python meta.function-call.python meta.function-call.generic.python",
             ],
             "settings": {
                 "fontStyle": "",
                 "foreground": "#A9DC76"
             }
         },
+        { // SELF
+            "scope": [
+                "source.python meta.member.access.python meta.item-access.python meta.item-access.arguments.python",
+                "source.python meta.member.access.python meta.item-access.python meta.indexed-name.python",
+                "source.python meta.item-access.python meta.item-access.arguments.python",
+                "source.python meta.item-access.python meta.indexed-name.python",
+            ],
+            "settings": {
+                "foreground": "#FCFCFA",
+                "fontStyle": ""
+            }
+        }, // source.python meta.item-access.python meta.indexed-name.python // local type hint, ie tmp: List[int]
+        // source.python meta.item-access.python meta.indexed-name.python // 
         { // CLASS
             "scope": [
                 "entity.name.type.class.python",
                 "meta.function.python meta.item-access.python meta.indexed-name.python",
                 "meta.function.python",
                 "entity.other.inherited-class",
+                //"source.python meta.item-access.python meta.item-access.arguments.python",
+                //"source.python meta.item-access.python meta.indexed-name.python",
+                "source.python meta.function.python meta.function.parameters.python meta.item-access.python meta.indexed-name.python",
+                //"source.python meta.function-call.python meta.function-call.generic.python",
                 // Constructor call and own function have the same scopes :(
                 // "meta.function-call.generic.python",
+                "source.python meta.function.python meta.function.parameters.python meta.item-access.python meta.item-access.arguments.python",
             ],
             "settings": {
                 "fontStyle": "bold",
@@ -49,11 +66,12 @@
                 //"meta.function-call.generic.python",
                 //"meta.function-call.python",
                 "meta.attribute.python",
-                //"meta.member.access.python"
+                "meta.member.access.python",
+                "source.python meta.member.access.python meta.item-access.python meta.indexed-name.python"
             ],
             "settings": {
-                "foreground": "#eed40c"
-                //"foreground": "#dec60d"
+                //"foreground": "#eed40c"
+                "foreground": "#FDDC67" // beta test change color later maybe
             }
         },
         { // SELF
@@ -62,8 +80,8 @@
                 "variable.parameter.function.language.special.self.python"
             ],
             "settings": {
-                "foreground": "#FC9867",
-                "fontStyle": "italic"
+                "foreground": "#FF6188",
+                "fontStyle": "bold"
             }
         },
     ]
